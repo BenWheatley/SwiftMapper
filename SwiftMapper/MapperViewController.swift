@@ -29,14 +29,14 @@ class MapperViewController: NSViewController {
 		}
 	}
 	
-	func loadMap(fileName: String, map: Map = Map(), completionHandler: @escaping (Map) -> Void) {
+	func loadMap(fileName: String, completionHandler: @escaping (Map) -> Void) {
 		guard let path = Bundle.main.path(forResource: fileName, ofType: "xml") else {
 			print("fail")
 			return
 		}
 		do {
 			let data = try Data(contentsOf: URL(fileURLWithPath: path))
-			_ = MapXMLParser(xml: data, map: map, completionHandler: completionHandler)
+			_ = MapXMLParser(xml: data, completionHandler: completionHandler)
 		} catch {
 			print("error")
 		}

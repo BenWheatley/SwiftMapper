@@ -15,9 +15,9 @@ class MapXMLParser: NSObject, XMLParserDelegate {
 	
 	var completionHandler: (Map) -> Void
 	
-	init(xml: Data, map: Map = Map(), completionHandler: @escaping (Map) -> Void) {
+	init(xml: Data, completionHandler: @escaping (Map) -> Void) {
 		self.completionHandler = completionHandler;
-		self.map = map
+		map = Map()
 		
 		parser = XMLParser(data: xml)
 		super.init()

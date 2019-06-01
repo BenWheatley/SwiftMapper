@@ -8,14 +8,6 @@
 
 import Foundation
 
-extension Dictionary {
-	mutating func merge(dict: [Key: Value]){
-		for (k, v) in dict {
-			self[k] = v
-		}
-	}
-}
-
 struct Map {
 	var nodes: [Int: MapNode] = [:]
 	var ways: [Int: MapWay] = [:]
