@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		B5A2171C22A28CE000D01EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2171B22A28CE000D01EC1 /* AppDelegate.swift */; };
-		B5A2171E22A28CE000D01EC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2171D22A28CE000D01EC1 /* ViewController.swift */; };
+		B5A2171E22A28CE000D01EC1 /* MapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2171D22A28CE000D01EC1 /* MapperViewController.swift */; };
 		B5A2172022A28CE200D01EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A2171F22A28CE200D01EC1 /* Assets.xcassets */; };
 		B5A2172322A28CE200D01EC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A2172122A28CE200D01EC1 /* Main.storyboard */; };
 		B5A2172F22A28CE200D01EC1 /* SwiftMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2172E22A28CE200D01EC1 /* SwiftMapperTests.swift */; };
 		B5A2173A22A28CE200D01EC1 /* SwiftMapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2173922A28CE200D01EC1 /* SwiftMapperUITests.swift */; };
+		B5A2174A22A2956800D01EC1 /* public-transport-data-berlin-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5A2174922A2956700D01EC1 /* public-transport-data-berlin-xapi.xml */; };
+		B5A2174C22A2959A00D01EC1 /* MapNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2174B22A2959A00D01EC1 /* MapNode.swift */; };
+		B5A2174F22A2962100D01EC1 /* MapWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2174E22A2962100D01EC1 /* MapWay.swift */; };
+		B5A2175122A2966300D01EC1 /* MapXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175022A2966300D01EC1 /* MapXMLParser.swift */; };
+		B5A2175322A2969100D01EC1 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175222A2969100D01EC1 /* Map.swift */; };
+		B5A2175522A2B8B000D01EC1 /* MapElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175422A2B8B000D01EC1 /* MapElement.swift */; };
+		B5A2175B22A2C79800D01EC1 /* KSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175A22A2C79800D01EC1 /* KSMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +42,7 @@
 /* Begin PBXFileReference section */
 		B5A2171822A28CE000D01EC1 /* SwiftMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A2171B22A28CE000D01EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5A2171D22A28CE000D01EC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5A2171D22A28CE000D01EC1 /* MapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperViewController.swift; sourceTree = "<group>"; };
 		B5A2171F22A28CE200D01EC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5A2172222A28CE200D01EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5A2172422A28CE200D01EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +53,13 @@
 		B5A2173522A28CE200D01EC1 /* SwiftMapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A2173922A28CE200D01EC1 /* SwiftMapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapperUITests.swift; sourceTree = "<group>"; };
 		B5A2173B22A28CE200D01EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A2174922A2956700D01EC1 /* public-transport-data-berlin-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "public-transport-data-berlin-xapi.xml"; sourceTree = "<group>"; };
+		B5A2174B22A2959A00D01EC1 /* MapNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNode.swift; sourceTree = "<group>"; };
+		B5A2174E22A2962100D01EC1 /* MapWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWay.swift; sourceTree = "<group>"; };
+		B5A2175022A2966300D01EC1 /* MapXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapXMLParser.swift; sourceTree = "<group>"; };
+		B5A2175222A2969100D01EC1 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		B5A2175422A2B8B000D01EC1 /* MapElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapElement.swift; sourceTree = "<group>"; };
+		B5A2175A22A2C79800D01EC1 /* KSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +111,14 @@
 			isa = PBXGroup;
 			children = (
 				B5A2171B22A28CE000D01EC1 /* AppDelegate.swift */,
-				B5A2171D22A28CE000D01EC1 /* ViewController.swift */,
+				B5A2171D22A28CE000D01EC1 /* MapperViewController.swift */,
+				B5A2175A22A2C79800D01EC1 /* KSMapView.swift */,
+				B5A2174D22A295A300D01EC1 /* MapModel */,
 				B5A2171F22A28CE200D01EC1 /* Assets.xcassets */,
 				B5A2172122A28CE200D01EC1 /* Main.storyboard */,
 				B5A2172422A28CE200D01EC1 /* Info.plist */,
 				B5A2172522A28CE200D01EC1 /* SwiftMapper.entitlements */,
+				B5A2174922A2956700D01EC1 /* public-transport-data-berlin-xapi.xml */,
 			);
 			path = SwiftMapper;
 			sourceTree = "<group>";
@@ -122,6 +139,18 @@
 				B5A2173B22A28CE200D01EC1 /* Info.plist */,
 			);
 			path = SwiftMapperUITests;
+			sourceTree = "<group>";
+		};
+		B5A2174D22A295A300D01EC1 /* MapModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5A2174B22A2959A00D01EC1 /* MapNode.swift */,
+				B5A2174E22A2962100D01EC1 /* MapWay.swift */,
+				B5A2175422A2B8B000D01EC1 /* MapElement.swift */,
+				B5A2175222A2969100D01EC1 /* Map.swift */,
+				B5A2175022A2966300D01EC1 /* MapXMLParser.swift */,
+			);
+			path = MapModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5A2172022A28CE200D01EC1 /* Assets.xcassets in Resources */,
+				B5A2174A22A2956800D01EC1 /* public-transport-data-berlin-xapi.xml in Resources */,
 				B5A2172322A28CE200D01EC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5A2171E22A28CE000D01EC1 /* ViewController.swift in Sources */,
+				B5A2175122A2966300D01EC1 /* MapXMLParser.swift in Sources */,
+				B5A2175B22A2C79800D01EC1 /* KSMapView.swift in Sources */,
+				B5A2174C22A2959A00D01EC1 /* MapNode.swift in Sources */,
+				B5A2175522A2B8B000D01EC1 /* MapElement.swift in Sources */,
+				B5A2171E22A28CE000D01EC1 /* MapperViewController.swift in Sources */,
+				B5A2174F22A2962100D01EC1 /* MapWay.swift in Sources */,
+				B5A2175322A2969100D01EC1 /* Map.swift in Sources */,
 				B5A2171C22A28CE000D01EC1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
