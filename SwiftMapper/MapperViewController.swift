@@ -9,11 +9,31 @@
 import Cocoa
 
 class MapperViewController: NSViewController {
-
+	
+	@IBOutlet var map: KSMapView!
+	
+	var parser: MapXMLParser? = nil
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		// Do any additional setup after loading the view.
+	}
+	
+	override func viewDidAppear() {
+		super.viewDidAppear()
+		
+		guard let path = Bundle.main.path(forResource: "public-transport-data-berlin-xapi", ofType: "xml") else {
+			print("fail")
+			return
+		}
+		do {
+			let data = try Data(contentsOf: URL(fileURLWithPath: path))
+			parser = MapXMLParser(xml: data) { map in
+				self.map.map = map
+				self.parser = nil
+			}
+		} catch {
+			print("error")
+		}
 	}
 
 	override var representedObject: Any? {
