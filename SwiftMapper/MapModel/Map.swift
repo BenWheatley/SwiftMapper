@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Map {
+	var nodes: [Int: MapNode] = [:]
+	var ways: [Int: MapWay] = [:]
+	
+	var bounds: NSRect = NSZeroRect
+}

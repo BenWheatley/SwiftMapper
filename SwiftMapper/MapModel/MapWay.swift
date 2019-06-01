@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+class MapWay: MapElement {
+	/// References, not instances
+	var nodes: [Int] = []
+}
