@@ -20,6 +20,7 @@
 		B5A2175322A2969100D01EC1 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175222A2969100D01EC1 /* Map.swift */; };
 		B5A2175522A2B8B000D01EC1 /* MapElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175422A2B8B000D01EC1 /* MapElement.swift */; };
 		B5A2175B22A2C79800D01EC1 /* KSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175A22A2C79800D01EC1 /* KSMapView.swift */; };
+		B5A2175D22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		B5A2175222A2969100D01EC1 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		B5A2175422A2B8B000D01EC1 /* MapElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapElement.swift; sourceTree = "<group>"; };
 		B5A2175A22A2C79800D01EC1 /* KSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSMapView.swift; sourceTree = "<group>"; };
+		B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "railway-data-berlin-xapi.xml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				B5A2172122A28CE200D01EC1 /* Main.storyboard */,
 				B5A2172422A28CE200D01EC1 /* Info.plist */,
 				B5A2172522A28CE200D01EC1 /* SwiftMapper.entitlements */,
+				B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */,
 				B5A2174922A2956700D01EC1 /* public-transport-data-berlin-xapi.xml */,
 			);
 			path = SwiftMapper;
@@ -260,6 +263,7 @@
 				B5A2172022A28CE200D01EC1 /* Assets.xcassets in Resources */,
 				B5A2174A22A2956800D01EC1 /* public-transport-data-berlin-xapi.xml in Resources */,
 				B5A2172322A28CE200D01EC1 /* Main.storyboard in Resources */,
+				B5A2175D22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

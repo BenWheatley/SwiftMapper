@@ -15,9 +15,9 @@ class MapXMLParser: NSObject, XMLParserDelegate {
 	
 	var completionHandler: (Map) -> Void
 	
-	init(xml: Data, completionHandler: @escaping (Map) -> Void) {
+	init(xml: Data, map: Map = Map(), completionHandler: @escaping (Map) -> Void) {
 		self.completionHandler = completionHandler;
-		map = Map()
+		self.map = map
 		
 		parser = XMLParser(data: xml)
 		super.init()
@@ -67,32 +67,7 @@ class MapXMLParser: NSObject, XMLParserDelegate {
 		}
 	}
 	
-	func calculateBounds() -> NSRect {
-		var minLat = 1000.0
-		var minLon = 1000.0
-		var maxLat = -1000.0
-		var maxLon = -10000.0
-		
-		for (_, node) in map.nodes {
-			if node.lat < minLat {
-				minLat = node.lat
-			}
-			if node.lat > maxLat {
-				maxLat = node.lat
-			}
-			if node.lon < minLon {
-				minLon = node.lon
-			}
-			if node.lon > maxLon {
-				maxLon = node.lon
-			}
-		}
-		
-		return NSRect(x: minLon, y: minLat, width: maxLon-minLon, height: maxLat-minLat)
-	}
-	
 	func parserDidEndDocument(_ parser: XMLParser) {
-		map.bounds = calculateBounds()
 		completionHandler(map)
 	}
 

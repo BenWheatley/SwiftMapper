@@ -10,9 +10,9 @@ import Cocoa
 
 class MapperViewController: NSViewController {
 	
-	@IBOutlet var map: KSMapView!
+	@IBOutlet var map1: KSMapView!
 	
-	var parser: MapXMLParser? = nil
+//	var parser: MapXMLParser? = nil
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,16 +21,22 @@ class MapperViewController: NSViewController {
 	override func viewDidAppear() {
 		super.viewDidAppear()
 		
-		guard let path = Bundle.main.path(forResource: "public-transport-data-berlin-xapi", ofType: "xml") else {
+		loadMap(fileName: "railway-data-berlin-xapi") { map in
+			self.map1.map = map
+		}
+//		loadMap(fileName: "public-transport-data-berlin-xapi") { map in
+//			self.map1.map = map
+//		}
+	}
+	
+	func loadMap(fileName: String, map: Map = Map(), completionHandler: @escaping (Map) -> Void) {
+		guard let path = Bundle.main.path(forResource: fileName, ofType: "xml") else {
 			print("fail")
 			return
 		}
 		do {
 			let data = try Data(contentsOf: URL(fileURLWithPath: path))
-			parser = MapXMLParser(xml: data) { map in
-				self.map.map = map
-				self.parser = nil
-			}
+			_ = MapXMLParser(xml: data, map: map, completionHandler: completionHandler)
 		} catch {
 			print("error")
 		}

@@ -12,6 +12,9 @@ class KSMapView: NSView {
 	
 	var map: Map? = nil {
 		didSet {
+			if let oldMap = oldValue {
+				map?.merge(otherMap: oldMap)
+			}
 			needsDisplay = true
 		}
 	}

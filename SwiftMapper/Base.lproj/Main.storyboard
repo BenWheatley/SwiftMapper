@@ -721,7 +721,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="map" destination="g20-uC-Pzd" id="uq7-9K-lbg"/>
+                        <outlet property="map1" destination="g20-uC-Pzd" id="uq7-9K-lbg"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
