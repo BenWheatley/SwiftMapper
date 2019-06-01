@@ -12,11 +12,16 @@ class KSMapView: NSView {
 	
 	var map: Map? = nil {
 		didSet {
-			if let oldMap = oldValue {
-				map?.merge(otherMap: oldMap)
-			}
 			needsDisplay = true
 		}
+	}
+	
+	func mergeData(newMap: Map) {
+		if map == nil {
+			self.map = newMap
+			return
+		}
+		map?.merge(otherMap: newMap)
 	}
 	
 	override func draw(_ dirtyRect: NSRect) {

@@ -22,11 +22,11 @@ class MapperViewController: NSViewController {
 		super.viewDidAppear()
 		
 		loadMap(fileName: "railway-data-berlin-xapi") { map in
-			self.map1.map = map
+			self.map1.mergeData(newMap: map)
 		}
-//		loadMap(fileName: "public-transport-data-berlin-xapi") { map in
-//			self.map1.map = map
-//		}
+		loadMap(fileName: "public-transport-data-berlin-xapi") { map in
+			self.map1.mergeData(newMap: map)
+		}
 	}
 	
 	func loadMap(fileName: String, map: Map = Map(), completionHandler: @escaping (Map) -> Void) {
