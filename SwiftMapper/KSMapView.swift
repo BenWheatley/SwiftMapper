@@ -18,8 +18,8 @@ class KSMapView: NSView {
 	
 	override func draw(_ dirtyRect: NSRect) {
 		guard let map = map else { return }
-		for (key, way) in map.ways {
-			NSColor.black.setStroke()
+		for (_, way) in map.ways {
+			NSColor(hue: CGFloat.random(in: 0..<1), saturation: 1, brightness: 1, alpha: 1).setStroke()
 			var optionalPath: NSBezierPath? = nil
 			for node in way.nodes {
 				guard let node = map.nodes[node] else {
@@ -46,7 +46,7 @@ class KSMapView: NSView {
 			return (((coordinate - coordinateOffset) * unitScale) + 0.5) * drawSideLength
 		}
 		let result = NSPoint(x: scaleAndOffset(coordinate: lon, coordinateOffset: bounds.midX, unitScale: 1/bounds.width, drawSideLength: visibleRect.width),
-							 y: scaleAndOffset(coordinate: lat, coordinateOffset: bounds.midY, unitScale: 1/bounds.width, drawSideLength: visibleRect.width))
+							 y: scaleAndOffset(coordinate: lat, coordinateOffset: bounds.midY, unitScale: 1/bounds.height, drawSideLength: visibleRect.height))
 		return result
 	}
 }

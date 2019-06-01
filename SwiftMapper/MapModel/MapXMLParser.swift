@@ -73,7 +73,7 @@ class MapXMLParser: NSObject, XMLParserDelegate {
 		var maxLat = -1000.0
 		var maxLon = -10000.0
 		
-		for (key, node) in map.nodes {
+		for (_, node) in map.nodes {
 			if node.lat < minLat {
 				minLat = node.lat
 			}
