@@ -15,6 +15,19 @@ class MapXMLParser: NSObject, XMLParserDelegate {
 	
 	var completionHandler: (Map) -> Void
 	
+	static func loadMap(fileName: String, bundle: Bundle = Bundle.main, completionHandler: @escaping (Map) -> Void) {
+		guard let path = bundle.path(forResource: fileName, ofType: "xml") else {
+			print("fail")
+			return
+		}
+		do {
+			let data = try Data(contentsOf: URL(fileURLWithPath: path))
+			_ = MapXMLParser(xml: data, completionHandler: completionHandler)
+		} catch {
+			print("error")
+		}
+	}
+	
 	init(xml: Data, completionHandler: @escaping (Map) -> Void) {
 		self.completionHandler = completionHandler;
 		map = Map()

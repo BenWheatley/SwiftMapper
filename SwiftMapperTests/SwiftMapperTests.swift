@@ -20,15 +20,17 @@ class SwiftMapperTests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+		
+		MapXMLParser.loadMap(fileName: "test-empty") { map in
+			XCTAssertEqual(map.nodes.count, 0)
+			XCTAssertEqual(map.ways.count, 0)
+		}
+		MapXMLParser.loadMap(fileName: "test-1-node-1-way") { map in
+			XCTAssertEqual(map.nodes.count, 1)
+			XCTAssertEqual(map.ways.count, 1)
+			XCTAssertEqual(map.calculateBounds(), NSRect(x: 52.5031222, y: 13.4731938, width: 0, height: 0))
+		}
     }
 
 }

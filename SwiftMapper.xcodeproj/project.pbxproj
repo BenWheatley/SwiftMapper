@@ -22,6 +22,8 @@
 		B5A2175B22A2C79800D01EC1 /* KSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175A22A2C79800D01EC1 /* KSMapView.swift */; };
 		B5A2175D22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */; };
 		B5A2176022A3224B00D01EC1 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175F22A3224B00D01EC1 /* Dictionary+Extension.swift */; };
+		B5A2176322A323B500D01EC1 /* test-1-node-1-way.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5A2176122A323B500D01EC1 /* test-1-node-1-way.xml */; };
+		B5A2176422A323B500D01EC1 /* test-empty.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5A2176222A323B500D01EC1 /* test-empty.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		B5A2175A22A2C79800D01EC1 /* KSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSMapView.swift; sourceTree = "<group>"; };
 		B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "railway-data-berlin-xapi.xml"; sourceTree = "<group>"; };
 		B5A2175F22A3224B00D01EC1 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		B5A2176122A323B500D01EC1 /* test-1-node-1-way.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "test-1-node-1-way.xml"; path = "SwiftMapper/test-1-node-1-way.xml"; sourceTree = SOURCE_ROOT; };
+		B5A2176222A323B500D01EC1 /* test-empty.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "test-empty.xml"; path = "SwiftMapper/test-empty.xml"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 		B5A2172D22A28CE200D01EC1 /* SwiftMapperTests */ = {
 			isa = PBXGroup;
 			children = (
+				B5A2176122A323B500D01EC1 /* test-1-node-1-way.xml */,
+				B5A2176222A323B500D01EC1 /* test-empty.xml */,
 				B5A2172E22A28CE200D01EC1 /* SwiftMapperTests.swift */,
 				B5A2173022A28CE200D01EC1 /* Info.plist */,
 			);
@@ -282,6 +288,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A2176322A323B500D01EC1 /* test-1-node-1-way.xml in Resources */,
+				B5A2176422A323B500D01EC1 /* test-empty.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

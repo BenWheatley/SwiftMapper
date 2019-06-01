@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.55.7 8b86ff77">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2019-06-01T16:04:02Z"/>
+
+  <node id="20246144" lat="52.5031222" lon="13.4731938"/>
+  <way id="693633056">
+    <nd ref="20246144"/>
+  </way>
+
+</osm>
