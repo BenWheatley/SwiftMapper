@@ -10,9 +10,8 @@ import Cocoa
 
 class MapperViewController: NSViewController {
 	
-	@IBOutlet var map1: KSMapView!
-	
-//	var parser: MapXMLParser? = nil
+	@IBOutlet var map: KSMapView!
+	var setupCallback: ((MapperViewController)->Void)?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,11 +20,8 @@ class MapperViewController: NSViewController {
 	override func viewDidAppear() {
 		super.viewDidAppear()
 		
-		MapXMLParser.loadMap(fileName: "railway-data-berlin-xapi") { map in
-			self.map1.mergeData(newMap: map)
-		}
-		MapXMLParser.loadMap(fileName: "public-transport-data-berlin-xapi") { map in
-			self.map1.mergeData(newMap: map)
+		if let callback = setupCallback {
+			callback(self)
 		}
 	}
 	

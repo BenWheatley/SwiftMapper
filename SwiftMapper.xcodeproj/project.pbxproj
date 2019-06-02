@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B533E7C822A4439C00915C86 /* historican-nodes-in-mexico-ish-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B533E7C622A4439B00915C86 /* historican-nodes-in-mexico-ish-xapi.xml */; };
+		B533E7C922A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B533E7C722A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml */; };
 		B5A2171C22A28CE000D01EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2171B22A28CE000D01EC1 /* AppDelegate.swift */; };
 		B5A2171E22A28CE000D01EC1 /* MapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2171D22A28CE000D01EC1 /* MapperViewController.swift */; };
 		B5A2172022A28CE200D01EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A2171F22A28CE200D01EC1 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B533E7C622A4439B00915C86 /* historican-nodes-in-mexico-ish-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "historican-nodes-in-mexico-ish-xapi.xml"; sourceTree = "<group>"; };
+		B533E7C722A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "historican-nodes-in-berlin-ish-xapi.xml"; sourceTree = "<group>"; };
 		B5A2171822A28CE000D01EC1 /* SwiftMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A2171B22A28CE000D01EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5A2171D22A28CE000D01EC1 /* MapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				B5A2172522A28CE200D01EC1 /* SwiftMapper.entitlements */,
 				B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */,
 				B5A2174922A2956700D01EC1 /* public-transport-data-berlin-xapi.xml */,
+				B533E7C722A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml */,
+				B533E7C622A4439B00915C86 /* historican-nodes-in-mexico-ish-xapi.xml */,
 			);
 			path = SwiftMapper;
 			sourceTree = "<group>";
@@ -277,8 +283,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B533E7C822A4439C00915C86 /* historican-nodes-in-mexico-ish-xapi.xml in Resources */,
 				B5A2172022A28CE200D01EC1 /* Assets.xcassets in Resources */,
 				B5A2174A22A2956800D01EC1 /* public-transport-data-berlin-xapi.xml in Resources */,
+				B533E7C922A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml in Resources */,
 				B5A2172322A28CE200D01EC1 /* Main.storyboard in Resources */,
 				B5A2175D22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml in Resources */,
 			);

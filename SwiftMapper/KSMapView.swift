@@ -10,6 +10,8 @@ import AppKit
 
 class KSMapView: NSView {
 	
+	var showNodes = false { didSet { needsDisplay = true } }
+	
 	var map: Map? = nil {
 		didSet {
 			needsDisplay = true
@@ -43,6 +45,17 @@ class KSMapView: NSView {
 				path.line(to: point)
 			}
 			optionalPath?.stroke()
+		}
+		if showNodes {
+			NSColor.black.setStroke()
+			NSColor.white.setFill()
+			for (_, node) in map.nodes {
+				let point = transformedPoint(lat: CGFloat(node.lat), lon: CGFloat(node.lon))
+				let rect = NSMakeRect(point.x-1, point.y-1, 3, 3)
+				let path = NSBezierPath.init(ovalIn: rect)
+				path.fill()
+				path.stroke()
+			}
 		}
 	}
 	
