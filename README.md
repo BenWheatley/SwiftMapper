@@ -11,6 +11,8 @@ Example data is Berlin-area public transport information. Uses pre-fetched data 
 
 This is a macOS project, because it's been far too long since I last made something for the desktop.
 
+Currently only knows about `way`a and `node`s, not `relation`s. Random hue for each way, nodes rendered (optionally) as black rings filled solid white.
+
 # Berlin public transit
 
 ![Berlin public transit map](Berlin-public-transport-infrastructure.png?raw=true "Berlin public transit map")
@@ -22,5 +24,3 @@ This is a macOS project, because it's been far too long since I last made someth
 # Mexico historical nodes
 
 ![Mexico public transit map](Mexico-area-historical-nodes.png?raw=true "Mexico historical nodes")
-
-Currently only knows about `way`a and `node`s, not `relation`s. Random hue for each way.
