@@ -11,15 +11,15 @@ Example data is Berlin-area public transport information. Uses pre-fetched data 
 
 This is a macOS project, because it's been far too long since I last made something for the desktop.
 
-#Berlin public transit
+# Berlin public transit
 
 ![Berlin public transit map](Berlin-public-transport-infrastructure.png?raw=true "Berlin public transit map")
 
-#Berlin historical nodes
+# Berlin historical nodes
 
 ![Berlin historical node map](Berlin-historical-nodes.png?raw=true "Berlin historical nodes")
 
-#Mexico historical nodes
+# Mexico historical nodes
 
 ![Mexico public transit map](Mexico-area-historical-nodes.png?raw=true "Mexico historical nodes")
 
