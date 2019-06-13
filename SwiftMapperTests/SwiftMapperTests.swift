@@ -20,8 +20,6 @@ class SwiftMapperTests: XCTestCase {
     }
 
     func testExample() {
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-		
 		MapXMLParser.loadMap(fileName: "test-empty") { map in
 			XCTAssertEqual(map.nodes.count, 0)
 			XCTAssertEqual(map.ways.count, 0)
