@@ -19,11 +19,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// Insert code here to tear down your application
 	}
 	
-	func completionBlockGenerator(file: String, showNodes: Bool) -> (MapperViewController)->Void {
+	func completionBlockGenerator(files: String..., showNodes: Bool = true) -> (MapperViewController)->Void {
 		return { mapperViewController in
 			
-			MapXMLParser.loadMap(fileName: file) { map in
-				mapperViewController.map.mergeData(newMap: map)
+			for file in files {
+				MapXMLParser.loadMap(fileName: file) { map in
+					mapperViewController.map.mergeData(newMap: map)
+				}
 			}
 			mapperViewController.map.showNodes = showNodes
 			
@@ -34,24 +36,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		let completionBlock: (MapperViewController)->Void
 		switch sender.title {
 		case "Berlin public transit":
-			completionBlock = { mapperViewController in
-				
-				MapXMLParser.loadMap(fileName: "railway-data-berlin-xapi") { map in
-					mapperViewController.map.mergeData(newMap: map)
-				}
-				MapXMLParser.loadMap(fileName: "public-transport-data-berlin-xapi") { map in
-					mapperViewController.map.mergeData(newMap: map)
-				}
-				
-			}
+			completionBlock = completionBlockGenerator(files: "railway-data-berlin-xapi", "public-transport-data-berlin-xapi",
+													   showNodes: false)
 		case "Berlin historical":
-			completionBlock = completionBlockGenerator(file: "historican-nodes-in-berlin-ish-xapi", showNodes: true)
+			completionBlock = completionBlockGenerator(files: "historican-nodes-in-berlin-ish-xapi")
 		case "Mexico historical":
-			completionBlock = completionBlockGenerator(file: "historican-nodes-in-mexico-ish-xapi", showNodes: true)
+			completionBlock = completionBlockGenerator(files: "historican-nodes-in-mexico-ish-xapi")
 		case "Athens area amenities":
-			completionBlock = completionBlockGenerator(file: "amenities-in-athens-ish-xapi", showNodes: true)
+			completionBlock = completionBlockGenerator(files: "amenities-in-athens-ish-xapi")
 		case "Athens center amenities":
-			completionBlock = completionBlockGenerator(file: "amenities-in-central-athens-xapi", showNodes: true)
+			completionBlock = completionBlockGenerator(files: "amenities-in-central-athens-xapi")
 		default:
 			completionBlock = { mapperViewController in }
 		}
