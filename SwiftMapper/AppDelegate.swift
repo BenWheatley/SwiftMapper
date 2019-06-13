@@ -19,6 +19,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// Insert code here to tear down your application
 	}
 	
+	func completionBlockGenerator(file: String, showNodes: Bool) -> (MapperViewController)->Void {
+		return { mapperViewController in
+			
+			MapXMLParser.loadMap(fileName: file) { map in
+				mapperViewController.map.mergeData(newMap: map)
+			}
+			mapperViewController.map.showNodes = showNodes
+			
+		}
+	}
+	
 	@IBAction func openNewWindow(sender: NSMenuItem) {
 		let completionBlock: (MapperViewController)->Void
 		switch sender.title {
@@ -34,41 +45,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				
 			}
 		case "Berlin historical":
-			completionBlock = { mapperViewController in
-				
-				MapXMLParser.loadMap(fileName: "historican-nodes-in-berlin-ish-xapi") { map in
-					mapperViewController.map.mergeData(newMap: map)
-				}
-				mapperViewController.map.showNodes = true
-				
-			}
+			completionBlock = completionBlockGenerator(file: "historican-nodes-in-berlin-ish-xapi", showNodes: true)
 		case "Mexico historical":
-			completionBlock = { mapperViewController in
-				
-				MapXMLParser.loadMap(fileName: "historican-nodes-in-mexico-ish-xapi") { map in
-					mapperViewController.map.mergeData(newMap: map)
-				}
-				mapperViewController.map.showNodes = true
-				
-			}
+			completionBlock = completionBlockGenerator(file: "historican-nodes-in-mexico-ish-xapi", showNodes: true)
 		case "Athens area amenities":
-			completionBlock = { mapperViewController in
-				
-				MapXMLParser.loadMap(fileName: "amenities-in-athens-ish-xapi") { map in
-					mapperViewController.map.mergeData(newMap: map)
-				}
-				mapperViewController.map.showNodes = true
-				
-			}
+			completionBlock = completionBlockGenerator(file: "amenities-in-athens-ish-xapi", showNodes: true)
 		case "Athens center amenities":
-			completionBlock = { mapperViewController in
-				
-				MapXMLParser.loadMap(fileName: "amenities-in-central-athens-xapi") { map in
-					mapperViewController.map.mergeData(newMap: map)
-				}
-				mapperViewController.map.showNodes = true
-				
-			}
+			completionBlock = completionBlockGenerator(file: "amenities-in-central-athens-xapi", showNodes: true)
 		default:
 			completionBlock = { mapperViewController in }
 		}
