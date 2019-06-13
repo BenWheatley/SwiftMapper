@@ -11,6 +11,8 @@
 		B533E7C922A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B533E7C722A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml */; };
 		B533E7CB22A445BC00915C86 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B533E7CA22A445BC00915C86 /* README.md */; };
 		B533E7CD22A446AB00915C86 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B533E7CC22A446AB00915C86 /* LICENSE */; };
+		B572067522B26B5E009AE2E7 /* amenities-in-athens-ish-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B572067422B26B5D009AE2E7 /* amenities-in-athens-ish-xapi.xml */; };
+		B572067B22B26BE6009AE2E7 /* railway-data-berlin-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B572067A22B26BE6009AE2E7 /* railway-data-berlin-xapi.xml */; };
 		B5A2171C22A28CE000D01EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2171B22A28CE000D01EC1 /* AppDelegate.swift */; };
 		B5A2171E22A28CE000D01EC1 /* MapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2171D22A28CE000D01EC1 /* MapperViewController.swift */; };
 		B5A2172022A28CE200D01EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A2171F22A28CE200D01EC1 /* Assets.xcassets */; };
@@ -24,7 +26,6 @@
 		B5A2175322A2969100D01EC1 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175222A2969100D01EC1 /* Map.swift */; };
 		B5A2175522A2B8B000D01EC1 /* MapElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175422A2B8B000D01EC1 /* MapElement.swift */; };
 		B5A2175B22A2C79800D01EC1 /* KSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175A22A2C79800D01EC1 /* KSMapView.swift */; };
-		B5A2175D22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */; };
 		B5A2176022A3224B00D01EC1 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2175F22A3224B00D01EC1 /* Dictionary+Extension.swift */; };
 		B5A2176322A323B500D01EC1 /* test-1-node-1-way.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5A2176122A323B500D01EC1 /* test-1-node-1-way.xml */; };
 		B5A2176422A323B500D01EC1 /* test-empty.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5A2176222A323B500D01EC1 /* test-empty.xml */; };
@@ -52,6 +53,8 @@
 		B533E7C722A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "historican-nodes-in-berlin-ish-xapi.xml"; sourceTree = "<group>"; };
 		B533E7CA22A445BC00915C86 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B533E7CC22A446AB00915C86 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B572067422B26B5D009AE2E7 /* amenities-in-athens-ish-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "amenities-in-athens-ish-xapi.xml"; sourceTree = "<group>"; };
+		B572067A22B26BE6009AE2E7 /* railway-data-berlin-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "railway-data-berlin-xapi.xml"; sourceTree = "<group>"; };
 		B5A2171822A28CE000D01EC1 /* SwiftMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A2171B22A28CE000D01EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5A2171D22A28CE000D01EC1 /* MapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +75,6 @@
 		B5A2175222A2969100D01EC1 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		B5A2175422A2B8B000D01EC1 /* MapElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapElement.swift; sourceTree = "<group>"; };
 		B5A2175A22A2C79800D01EC1 /* KSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSMapView.swift; sourceTree = "<group>"; };
-		B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "railway-data-berlin-xapi.xml"; sourceTree = "<group>"; };
 		B5A2175F22A3224B00D01EC1 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		B5A2176122A323B500D01EC1 /* test-1-node-1-way.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "test-1-node-1-way.xml"; path = "SwiftMapper/test-1-node-1-way.xml"; sourceTree = SOURCE_ROOT; };
 		B5A2176222A323B500D01EC1 /* test-empty.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "test-empty.xml"; path = "SwiftMapper/test-empty.xml"; sourceTree = SOURCE_ROOT; };
@@ -137,10 +139,11 @@
 				B5A2172122A28CE200D01EC1 /* Main.storyboard */,
 				B5A2172422A28CE200D01EC1 /* Info.plist */,
 				B5A2172522A28CE200D01EC1 /* SwiftMapper.entitlements */,
-				B5A2175C22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml */,
+				B572067A22B26BE6009AE2E7 /* railway-data-berlin-xapi.xml */,
 				B5A2174922A2956700D01EC1 /* public-transport-data-berlin-xapi.xml */,
 				B533E7C722A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml */,
 				B533E7C622A4439B00915C86 /* historican-nodes-in-mexico-ish-xapi.xml */,
+				B572067422B26B5D009AE2E7 /* amenities-in-athens-ish-xapi.xml */,
 			);
 			path = SwiftMapper;
 			sourceTree = "<group>";
@@ -296,7 +299,8 @@
 				B533E7CB22A445BC00915C86 /* README.md in Resources */,
 				B533E7C922A4439C00915C86 /* historican-nodes-in-berlin-ish-xapi.xml in Resources */,
 				B5A2172322A28CE200D01EC1 /* Main.storyboard in Resources */,
-				B5A2175D22A2D9EB00D01EC1 /* railway-data-berlin-xapi.xml in Resources */,
+				B572067522B26B5E009AE2E7 /* amenities-in-athens-ish-xapi.xml in Resources */,
+				B572067B22B26BE6009AE2E7 /* railway-data-berlin-xapi.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
