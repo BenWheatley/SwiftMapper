@@ -242,6 +242,18 @@
                                                 <action selector="openNewWindowWithSender:" target="Voe-Tx-rLC" id="Xhl-2e-np3"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Athens center amenities" id="oKS-vj-YZn">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="openNewWindowWithSender:" target="Voe-Tx-rLC" id="qxK-w8-reb"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Athens area amenities" id="yPt-99-IsB">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="openNewWindowWithSender:" target="Voe-Tx-rLC" id="NHy-Ck-Wic"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="7wB-Yz-Gxo"/>
                                         <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
                                             <connections>

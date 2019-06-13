@@ -11,6 +11,23 @@ import AppKit
 class KSMapView: NSView {
 	
 	var showNodes = false { didSet { needsDisplay = true } }
+	let amenityEmoji: [String: String] = [
+		"school": "🏫", "taxi": "🚕", "fuel": "⛽️", "parking": "🅿️",
+		"bench": "⑁", "place_of_worship": "🛐", "ferry_terminal": "⛴",
+		"fast_food": "🍟", "pharmacy": "💊", "police": "👮‍♀️",
+		"theatre": "🎭", "bank": "🏦", "bus_station": "🚏",
+		"restaurant": "🍽", "car_rental": "🚗", "embassy": "🌐",
+		"cinema": "🎦", "telephone": "✆", "bar": "🍷",
+		"atm": "🏧", "cafe": "☕️", "bicycle_parking": "🚲🅿️",
+		"bicycle_rental": "🚲💵", "bicycle_repair_station": "🚲👩‍🔧",
+		"charging_station": "🚕⚡️", "dentist": "🦷", "post_box": "📮",
+		"post_office": "🏤", "printer": "🖨", "pub": "🍺",
+		"recycling": "♻️", "shower": "🚿", "toilets": "🚻",
+		"university": "🎓", "waste_basket": "🗑", "love_hotel": "🏩",
+		"library": "📚", "hospital": "🏥", "gambling": "🎰",
+		"ice_cream": "🍦", "fountain": "⛲️", "drinking_water": "🚰",
+		"fire_station": "🚒", "motorcycle_parking": "🏍🅿️"
+	] // Nowhere near a complete list, even for the dataset at the time of writing
 	
 	var map: Map? = nil {
 		didSet {
@@ -52,9 +69,14 @@ class KSMapView: NSView {
 			for (_, node) in map.nodes {
 				let point = transformedPoint(lat: CGFloat(node.lat), lon: CGFloat(node.lon))
 				let rect = NSMakeRect(point.x-1, point.y-1, 3, 3)
-				let path = NSBezierPath.init(ovalIn: rect)
-				path.fill()
-				path.stroke()
+				if let amenity = node.tags["amenity"],
+					let icon = amenityEmoji[amenity] {
+					icon.draw(at: point, withAttributes: nil)
+				} else {
+					let path = NSBezierPath.init(ovalIn: rect)
+					path.fill()
+					path.stroke()
+				}
 			}
 		}
 	}

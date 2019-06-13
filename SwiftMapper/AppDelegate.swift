@@ -51,6 +51,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				mapperViewController.map.showNodes = true
 				
 			}
+		case "Athens area amenities":
+			completionBlock = { mapperViewController in
+				
+				MapXMLParser.loadMap(fileName: "amenities-in-athens-ish-xapi") { map in
+					mapperViewController.map.mergeData(newMap: map)
+				}
+				mapperViewController.map.showNodes = true
+				
+			}
+		case "Athens center amenities":
+			completionBlock = { mapperViewController in
+				
+				MapXMLParser.loadMap(fileName: "amenities-in-central-athens-xapi") { map in
+					mapperViewController.map.mergeData(newMap: map)
+				}
+				mapperViewController.map.showNodes = true
+				
+			}
 		default:
 			completionBlock = { mapperViewController in }
 		}
