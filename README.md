@@ -26,3 +26,8 @@ Currently only knows about `way`a and `node`s, not `relation`s. Random hue for e
 # Mexico historical nodes
 
 ![Mexico public transit map](Mexico-area-historical-nodes.png?raw=true "Mexico historical nodes")
+
+# Athens amenities
+
+![Athens area amenities map](Athens-area-amenities.png?raw=true "Athens area amenities map")
+![Athens center amenities map](Athens-center-amenities.png?raw=true "Athens center amenities map")
