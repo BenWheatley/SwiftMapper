@@ -13,7 +13,7 @@ Example data is Berlin-area public transport information. Uses pre-fetched data 
 
 This is a macOS project, because it's been far too long since I last made something for the desktop.
 
-Currently only knows about `way`a and `node`s, not `relation`s. Random hue for each way, nodes rendered (optionally) as black rings filled solid white.
+Currently only knows about `way`a and `node`s, not `relation`s. Random hue for each way, nodes rendered (optionally) as black rings filled solid white, unless they're in a known list of amenities in which case they get their own emoji-based string as a label.
 
 # Berlin public transit
 
